@@ -1,0 +1,71 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  heroImage?: string;
+  pillar?: string;
+  audience?: string;
+  readingTime?: number;
+  canonical?: string;
+}
+
+const { title, description, pubDate, updatedDate, heroImage, pillar, readingTime, canonical } = Astro.props;
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "datePublished": pubDate.toISOString(),
+  "dateModified": (updatedDate ?? pubDate).toISOString(),
+  "author": {
+    "@type": "Person",
+    "name": "Yaddiel Samper",
+    "url": "https://yaddielasesorinmobiliario.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Yaddiel Samper Asesor Inmobiliario",
+    "url": "https://yaddielasesorinmobiliario.com"
+  },
+  "image": heroImage ? `https://yaddielasesorinmobiliario.com${heroImage}` : undefined,
+  "mainEntityOfPage": new URL(Astro.url.pathname, "https://yaddielasesorinmobiliario.com").toString()
+};
+---
+<BaseLayout
+  title={`${title} | Yaddiel Samper`}
+  description={description}
+  image={heroImage}
+  type="article"
+  canonical={canonical}
+  publishedAt={pubDate}
+  updatedAt={updatedDate}>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+
+  <article class="article-wrap">
+    <div class="article-meta">
+      {pillar && <span class="article-tag">{pillar}</span>}
+      <span class="article-date">{pubDate.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+      {readingTime && <span class="article-date">· {readingTime} min de lectura</span>}
+    </div>
+
+    <h1 class="article-title">{title}</h1>
+    <p class="article-lead">{description}</p>
+
+    {heroImage && <img src={heroImage} alt={title} style="width:100%; border-radius: 8px; margin-bottom: 2.5rem;" />}
+
+    <div class="article-body">
+      <slot />
+    </div>
+
+    <div class="article-cta">
+      <p>¿Quieres saber cuánto vale tu propiedad?</p>
+      <a href="/#valoracion" class="btn-primary">Solicitar valoración gratuita</a>
+    </div>
+  </article>
+</BaseLayout>

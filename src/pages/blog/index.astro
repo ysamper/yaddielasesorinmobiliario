@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+---
+<BaseLayout
+  title="Blog | Yaddiel Samper - Análisis del mercado inmobiliario en Canarias"
+  description="Datos, análisis y casos reales sobre el mercado inmobiliario en Canarias y Península. Para propietarios e inversores que quieren decidir mejor.">
+
+  <section style="padding-top: 7rem;">
+    <div class="section-inner">
+      <div class="section-tag fade-in">Mercado inmobiliario</div>
+      <h2 class="section-title fade-in">Artículos y<br><em>análisis de mercado.</em></h2>
+
+      {posts.length === 0 ? (
+        <p style="color: var(--text-muted);">El primer post llega esta semana.</p>
+      ) : (
+        <div class="blog-grid fade-in">
+          {posts.map(post => (
+            <a href={`/blog/${post.slug}`} class="blog-card">
+              <span class="blog-card-tag">{post.data.pillar ?? 'Artículo'}</span>
+              <div class="blog-card-title">{post.data.title}</div>
+              <div class="blog-card-excerpt">{post.data.description}</div>
+              <div class="blog-card-footer">
+                <span class="blog-card-date">{post.data.pubDate.toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })}</span>
+                <span class="blog-card-arrow">→</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>

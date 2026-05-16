@@ -1,0 +1,251 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+  .slice(0, 3);
+---
+<BaseLayout
+  title="Yaddiel Samper | Asesor Inmobiliario"
+  description="Vende tu propiedad al precio que merece. Asesor con mayor volumen de transacciones institucionales en Canarias. Valoración gratuita en 24h.">
+
+  <section class="hero" id="inicio">
+    <div class="hero-inner hero-split">
+      <div class="hero-content">
+        <h1>Vende tu propiedad<br>al precio que <em>merece.</em></h1>
+        <p class="hero-sub">Sin agencias genéricas. Sin promesas vacías. Con el asesor que más transacciones institucionales ha cerrado en Canarias y más de tres años trabajando con fondos de inversión.</p>
+        <div class="hero-actions">
+          <a href="#valoracion" class="btn-primary">Solicita tu valoración gratuita</a>
+          <a href="https://yaddiel-samper.century21.es/comprar?agency_handler=lighthouse" target="_blank" rel="noopener" class="btn-ghost">Ver propiedades</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="/yaddiel-samper.jpg" alt="Yaddiel Samper - Asesor Inmobiliario" />
+      </div>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="stats-inner">
+      <div class="stat">
+        <div class="stat-num">N.1</div>
+        <div class="stat-label">Volumen de transacciones<br>institucionales en Canarias</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">+3</div>
+        <div class="stat-label">Años asesorando fondos<br>de inversión</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">2</div>
+        <div class="stat-label">Mercados activos:<br>Canarias y Península</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="como-funciona">
+    <div class="section-inner">
+      <div class="section-tag fade-in">El proceso</div>
+      <h2 class="section-title fade-in">Tres pasos.<br><em>Sin complicaciones.</em></h2>
+      <div class="process-grid fade-in">
+        <div class="process-item">
+          <div class="process-num">01</div>
+          <div class="process-title">Rellenas el formulario</div>
+          <div class="process-desc">Cuéntame lo básico sobre tu propiedad. Tarda menos de 2 minutos. Sin compromiso.</div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">02</div>
+          <div class="process-title">Recibes tu valoración en 24h</div>
+          <div class="process-desc">Un informe real con precio de mercado, tiempo estimado de venta y estrategia recomendada.</div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">03</div>
+          <div class="process-title">Decidimos juntos</div>
+          <div class="process-desc">Si tiene sentido trabajar juntos, hablamos. Sin presión, sin compromisos anticipados.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="por-que">
+    <div class="section-inner">
+      <div class="section-tag fade-in">La diferencia</div>
+      <h2 class="section-title fade-in">Por qué no soy<br><em>un asesor más.</em></h2>
+      <div class="why-grid fade-in">
+        <div class="why-item">
+          <div class="why-icon">I</div>
+          <div class="why-title">Experiencia institucional real</div>
+          <div class="why-desc">He gestionado operaciones con fondos de inversión que la mayoría de agencias nunca verá. Eso se traduce en acceso a una red de compradores que no aparece en Idealista.</div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">II</div>
+          <div class="why-title">Red de compradores activos</div>
+          <div class="why-desc">Inversores y particulares buscando propiedades ahora mismo en Canarias y Península. Tu propiedad llega a quien puede comprarla, no solo a quien navega portales.</div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">III</div>
+          <div class="why-title">Sin excusas, con datos</div>
+          <div class="why-desc">El precio lo marca el mercado real, no lo que quieres escuchar. Te digo la verdad antes de firmar nada, no después de meses sin resultados.</div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">IV</div>
+          <div class="why-title">Tú siempre decides</div>
+          <div class="why-desc">Trabajo para conseguirte el mejor resultado, no para cerrar operaciones a cualquier precio. Tu propiedad, tus condiciones, tu ritmo.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <div class="section-inner">
+      <div class="section-tag fade-in">Mercado inmobiliario</div>
+      <h2 class="section-title fade-in">Artículos y<br><em>análisis de mercado.</em></h2>
+      <div class="blog-grid fade-in">
+        {posts.map(post => (
+          <a href={`/blog/${post.slug}`} class="blog-card">
+            <span class="blog-card-tag">{post.data.pillar ?? 'Artículo'}</span>
+            <div class="blog-card-title">{post.data.title}</div>
+            <div class="blog-card-excerpt">{post.data.description}</div>
+            <div class="blog-card-footer">
+              <span class="blog-card-date">{post.data.pubDate.toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })}</span>
+              <span class="blog-card-arrow">→</span>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="blog-cta-row fade-in">
+        <a href="/blog" class="btn-outline">Ver todos los artículos</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-section" id="newsletter">
+    <div class="section-inner">
+      <div class="newsletter-box fade-in">
+        <div class="newsletter-left">
+          <h2>Análisis de mercado<br><em>cada semana.</em></h2>
+          <p>Datos reales sobre el mercado inmobiliario en Canarias y Península. Sin relleno. Para propietarios e inversores que quieren tomar decisiones con información de calidad.</p>
+        </div>
+        <div class="newsletter-right">
+          <a href="https://perfil-inmobiliario-newsletter.beehiiv.com/" target="_blank" rel="noopener" class="btn-primary">Suscribirme gratis</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-section" id="contacto">
+    <div class="section-inner">
+      <div class="section-tag fade-in">Dónde encontrarme</div>
+      <div class="map-grid fade-in">
+        <div class="map-info">
+          <h3>Visítame en<br><em>la oficina.</em></h3>
+          <div class="map-detail">
+            <div class="map-detail-icon">📍</div>
+            <div class="map-detail-text">
+              <strong>Dirección</strong>
+              <span>Av. El Paso 24, Los Majuelos<br>38108 La Laguna, Santa Cruz de Tenerife</span>
+            </div>
+          </div>
+          <div class="map-detail">
+            <div class="map-detail-icon">📞</div>
+            <div class="map-detail-text">
+              <strong>Teléfono</strong>
+              <span>+34 679 89 10 27</span>
+            </div>
+          </div>
+          <div class="map-detail">
+            <div class="map-detail-icon">✉</div>
+            <div class="map-detail-text">
+              <strong>Email</strong>
+              <span>yaddiel.samper@century21.es</span>
+            </div>
+          </div>
+          <div class="map-detail">
+            <div class="map-detail-icon">🕐</div>
+            <div class="map-detail-text">
+              <strong>Horario</strong>
+              <span>Lunes a Viernes · 9:00 - 19:00</span>
+            </div>
+          </div>
+        </div>
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3488.123456789!2d-16.3290!3d28.4874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc41cff0000000001%3A0x0!2sAv.+el+Paso%2C+24%2C+38108+La+Laguna%2C+Santa+Cruz+de+Tenerife!5e0!3m2!1ses!2ses!4v1234567890"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resenas">
+    <div class="section-inner">
+      <div class="section-tag fade-in">Lo que dicen los clientes</div>
+      <h2 class="section-title fade-in">Resultados que<br><em>hablan por sí solos.</em></h2>
+      <div class="reviews-grid fade-in">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Muy profesional, me proporcionó todas las herramientas necesarias para comprar mi casa con toda seguridad!!"</p>
+          <div class="review-author">
+            <div class="review-avatar">SR</div>
+            <div class="review-author-info">
+              <strong>Saray Ramos</strong>
+              <span>Compradora · enero 2025</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Yaddiel es un excelente profesional. Me guió en todo el proceso de compra y siempre estuvo atento a todas mis inquietudes. Sin duda, totalmente recomendable."</p>
+          <div class="review-author">
+            <div class="review-avatar">NG</div>
+            <div class="review-author-info">
+              <strong>Nido Gomera</strong>
+              <span>Comprador · febrero 2025</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Una atención excelente. Profesionalismo, compromiso y dedicación. Su alto conocimiento del mercado fue clave para tomar decisiones acertadas. Totalmente recomendable."</p>
+          <div class="review-author">
+            <div class="review-avatar">JP</div>
+            <div class="review-author-info">
+              <strong>Jose Edgar Padron</strong>
+              <span>Cliente · 2024</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews-cta fade-in">
+        <a href="https://share.google/79IdYMV3JquUvFMYU" target="_blank" rel="noopener">Ver todas las reseñas en Google →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section" id="valoracion">
+    <div class="section-inner">
+      <div class="cta-box fade-in">
+        <h2>Solicita tu<br><em>valoración gratuita</em></h2>
+        <p>Recibes un informe personalizado con el precio real de mercado de tu propiedad en menos de 24 horas. Sin compromiso. Sin presión.</p>
+        <div class="rgpd-wrap">
+          <input type="checkbox" id="rgpd-consent" />
+          <label for="rgpd-consent">Acepto recibir comunicaciones comerciales de Yaddiel Samper relacionadas con mi propiedad y el proceso de venta. Puedo revocar este consentimiento en cualquier momento. <a href="/privacidad">Política de privacidad</a>.</label>
+        </div>
+        <a href="https://valuation.lystos.com?clientId=2f57af09-10e9-47ce-a505-281fa60511e3" class="btn-primary btn-primary-disabled" id="lystos-btn" target="_blank" rel="noopener">Quiero mi valoración gratuita</a>
+        <p class="cta-disclaimer">Datos protegidos bajo el RGPD. Nunca compartidos con terceros.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const cb = document.getElementById('rgpd-consent');
+    const btn = document.getElementById('lystos-btn');
+    cb?.addEventListener('change', () => {
+      if (cb.checked) btn?.classList.remove('btn-primary-disabled');
+      else btn?.classList.add('btn-primary-disabled');
+    });
+  </script>
+</BaseLayout>
