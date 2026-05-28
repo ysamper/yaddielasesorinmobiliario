@@ -440,28 +440,39 @@ section::after {
   max-width: 420px; margin: 0 auto 1.25rem; text-align: left;
 }
 .rgpd-wrap input[type="checkbox"] {
-  -webkit-appearance: none; appearance: none;
-  width: 18px; min-width: 18px; height: 18px;
-  margin-top: 1px;
-  border: 1.5px solid var(--gold);
-  border-radius: 3px;
-  background: #fff;
+  -webkit-appearance: none; -moz-appearance: none; appearance: none;
+  width: 22px; min-width: 22px; height: 22px;
+  margin-top: 2px;
+  border: 2px solid var(--gold);
+  border-radius: 4px;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(122, 92, 16, 0.15), inset 0 0 0 1px rgba(122, 92, 16, 0.08);
   cursor: pointer;
   position: relative;
   transition: all 0.15s ease;
   flex-shrink: 0;
+  display: inline-block;
+}
+.rgpd-wrap input[type="checkbox"]:hover {
+  border-color: var(--gold-light);
+  box-shadow: 0 2px 6px rgba(122, 92, 16, 0.25);
+}
+.rgpd-wrap input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 2px;
 }
 .rgpd-wrap input[type="checkbox"]:checked {
   background: var(--gold);
+  border-color: var(--gold);
 }
 .rgpd-wrap input[type="checkbox"]:checked::after {
-  content: '✓';
+  content: '';
   position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 12px;
-  font-weight: bold;
+  top: 3px; left: 7px;
+  width: 5px; height: 10px;
+  border: solid #fff;
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg);
 }
 .rgpd-wrap label { font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; cursor: pointer; }
 .rgpd-wrap label a { color: var(--gold); text-decoration: underline; }
