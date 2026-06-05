@@ -62,6 +62,8 @@ En este mercado, la información vale más que el capital. Un inversor bien info
 
 Eso lo he visto ocurrir varias veces.
 
+Si quieres entender el proceso completo de compra de un NPL antes de acercarte a ningún fondo, consulta la [guía paso a paso para comprar un NPL en Tenerife](/blog/como-comprar-npl-tenerife-guia-completa).
+
 Si estás analizando una operación con un fondo y quieres revisar la estrategia antes de hacer una oferta, escríbeme.
 
 ---

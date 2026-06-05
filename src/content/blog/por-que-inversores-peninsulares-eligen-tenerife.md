@@ -52,6 +52,8 @@ El reto está en conocer el mercado desde dentro. Saber qué zonas tienen más r
 
 Eso es exactamente lo que hago.
 
+Si quieres entender las distintas formas de invertir en Tenerife, desde residencial hasta activos NPL, consulta la [guía completa de inversión inmobiliaria en Tenerife](/blog/invertir-inmobiliaria-tenerife-2026). Si tu interés es específicamente en activos NPL o bancarios, puedes empezar por la [guía de compra de activos bancarios en Canarias](/blog/activos-bancarios-canarias-como-acceder).
+
 Si tienes capital disponible y quieres analizar una operación en Tenerife, escríbeme. Sin rodeos y sin perder tu tiempo.
 
 ---
