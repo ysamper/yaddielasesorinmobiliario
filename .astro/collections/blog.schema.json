@@ -1,0 +1,93 @@
+{
+  "$ref": "#/definitions/blog",
+  "definitions": {
+    "blog": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "pubDate": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "integer",
+              "format": "unix-time"
+            }
+          ]
+        },
+        "updatedDate": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "integer",
+              "format": "unix-time"
+            }
+          ]
+        },
+        "heroImage": {
+          "type": "string"
+        },
+        "pillar": {
+          "type": "string",
+          "enum": [
+            "Compraventa",
+            "Inversión",
+            "Mercado local",
+            "Tendencias",
+            "Casos de éxito",
+            "Educativo",
+            "Marca personal"
+          ]
+        },
+        "audience": {
+          "type": "string",
+          "enum": [
+            "Comprador",
+            "Vendedor",
+            "Inversor",
+            "Mixto"
+          ]
+        },
+        "readingTime": {
+          "type": "number"
+        },
+        "draft": {
+          "type": "boolean",
+          "default": false
+        },
+        "canonical": {
+          "type": "string",
+          "format": "uri"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "pubDate"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

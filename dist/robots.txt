@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yaddielasesorinmobiliario.com/sitemap-index.xml
