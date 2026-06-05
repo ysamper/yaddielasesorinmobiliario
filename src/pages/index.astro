@@ -7,21 +7,21 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .slice(0, 3);
 ---
 <BaseLayout
-  title="Yaddiel Samper | Asesor Inmobiliario"
-  description="Vende tu propiedad al precio que merece. Asesor con mayor volumen de transacciones institucionales en Canarias. Valoración gratuita en 24h.">
+  title="Yaddiel Samper | Asesor Inmobiliario en Tenerife"
+  description="Especialista en inversión inmobiliaria y activos NPL en Tenerife. 2x Premio al Mejor Asesor en Transacciones Institucionales en Canarias. También capto propiedades en exclusiva.">
 
   <section class="hero" id="inicio">
     <div class="hero-inner hero-split">
       <div class="hero-content">
-        <h1>Vende tu propiedad<br>al precio que <em>merece.</em></h1>
-        <p class="hero-sub">Sin agencias genéricas. Sin promesas vacías. Con el asesor que más transacciones institucionales ha cerrado en Canarias y más de tres años trabajando con fondos de inversión.</p>
+        <h1>El mercado inmobiliario<br>de Tenerife, <em>desde dentro.</em></h1>
+        <p class="hero-sub">Si eres inversor, te guío en activos NPL y operaciones con fondos. Si quieres vender, trabajo en exclusiva con propietarios que buscan resultados reales.</p>
         <div class="hero-actions">
-          <a href="#valoracion" class="btn-primary">Solicita tu valoración gratuita</a>
-          <a href="https://yaddiel-samper.century21.es/comprar?agency_handler=lighthouse" target="_blank" rel="noopener" class="btn-ghost">Ver propiedades</a>
+          <a href="#inversores" class="btn-primary">Soy inversor</a>
+          <a href="#valoracion" class="btn-ghost">Quiero vender</a>
         </div>
       </div>
       <div class="hero-photo">
-        <img src="/yaddiel-samper.jpg" alt="Yaddiel Samper - Asesor Inmobiliario" />
+        <img src="/yaddiel-samper.jpg" alt="Yaddiel Samper - Asesor Inmobiliario especializado en NPL y activos bancarios en Tenerife" />
       </div>
     </div>
   </section>
@@ -29,39 +29,72 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   <div class="stats">
     <div class="stats-inner">
       <div class="stat">
-        <div class="stat-num">N.1</div>
-        <div class="stat-label">Volumen de transacciones<br>institucionales en Canarias</div>
+        <div class="stat-num">2x</div>
+        <div class="stat-label">Premio al Mejor Asesor en<br>Transacciones Institucionales</div>
       </div>
       <div class="stat">
         <div class="stat-num">+3</div>
-        <div class="stat-label">Años asesorando fondos<br>de inversión</div>
+        <div class="stat-label">Años mediando operaciones<br>con fondos de inversión</div>
       </div>
       <div class="stat">
-        <div class="stat-num">2</div>
-        <div class="stat-label">Mercados activos:<br>Canarias y Península</div>
+        <div class="stat-num">N.1</div>
+        <div class="stat-label">Volumen de transacciones<br>institucionales en Canarias</div>
       </div>
     </div>
   </div>
 
+  <section id="inversores">
+    <div class="section-inner">
+      <div class="section-tag fade-in">Para inversores</div>
+      <h2 class="section-title fade-in">Activos NPL y operaciones<br><em>con fondos en Tenerife.</em></h2>
+      <p class="section-intro fade-in">Tenerife combina fiscalidad diferencial, rentabilidad sostenida y demanda estructural que pocas zonas de España pueden igualar. Sé cómo navegar este mercado porque llevo años cerrando operaciones en él.</p>
+      <div class="why-grid fade-in">
+        <div class="why-item">
+          <div class="why-icon">01</div>
+          <div class="why-title">Acceso a activos NPL</div>
+          <div class="why-desc">Tengo acceso directo a carteras de fondos de inversión. Activos que no aparecen en ningún portal y que solo llegan por red y confianza.</div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">02</div>
+          <div class="why-title">Proceso completo gestionado</div>
+          <div class="why-desc">Due diligence, negociación con el fondo, cesión de crédito y resolución final. Te acompaño en cada fase sin que te pierdas en el proceso.</div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">03</div>
+          <div class="why-title">Tenerife como mercado</div>
+          <div class="why-desc">IGIC al 7%, rentabilidad bruta media del 5,5% y el 23,12% de los compradores extranjeros en España eligen Canarias. Los datos respaldan la decisión.</div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">04</div>
+          <div class="why-title">Sin rodeos</div>
+          <div class="why-desc">Solo hablo con inversores con capacidad real. Si la operación no tiene sentido para ti, te lo digo antes de perder tu tiempo.</div>
+        </div>
+      </div>
+      <div class="blog-cta-row fade-in">
+        <a href="mailto:yaddiel.samper@century21.es" class="btn-primary">Quiero analizar una operación</a>
+      </div>
+    </div>
+  </section>
+
   <section id="como-funciona">
     <div class="section-inner">
-      <div class="section-tag fade-in">El proceso</div>
-      <h2 class="section-title fade-in">Tres pasos.<br><em>Sin complicaciones.</em></h2>
+      <div class="section-tag fade-in">Para vendedores</div>
+      <h2 class="section-title fade-in">Vende con estrategia.<br><em>No con prisa.</em></h2>
       <div class="process-grid fade-in">
         <div class="process-item">
           <div class="process-num">01</div>
-          <div class="process-title">Rellenas el formulario</div>
+          <div class="process-title">Solicitas tu valoración</div>
           <div class="process-desc">Cuéntame lo básico sobre tu propiedad. Tarda menos de 2 minutos. Sin compromiso.</div>
         </div>
         <div class="process-item">
           <div class="process-num">02</div>
-          <div class="process-title">Recibes tu valoración en 24h</div>
-          <div class="process-desc">Un informe real con precio de mercado, tiempo estimado de venta y estrategia recomendada.</div>
+          <div class="process-title">Recibes tu informe en 24h</div>
+          <div class="process-desc">Precio real de mercado, tiempo estimado de venta y estrategia recomendada. Sin adornos.</div>
         </div>
         <div class="process-item">
           <div class="process-num">03</div>
-          <div class="process-title">Decidimos juntos</div>
-          <div class="process-desc">Si tiene sentido trabajar juntos, hablamos. Sin presión, sin compromisos anticipados.</div>
+          <div class="process-title">Trabajamos en exclusiva</div>
+          <div class="process-desc">Si tiene sentido trabajar juntos, firmo un compromiso real contigo. Un asesor, una estrategia, un resultado.</div>
         </div>
       </div>
     </div>
@@ -74,23 +107,23 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
       <div class="why-grid fade-in">
         <div class="why-item">
           <div class="why-icon">I</div>
-          <div class="why-title">Experiencia institucional real</div>
-          <div class="why-desc">He gestionado operaciones con fondos de inversión que la mayoría de agencias nunca verá. Eso se traduce en acceso a una red de compradores que no aparece en Idealista.</div>
+          <div class="why-title">Dos premios que lo demuestran</div>
+          <div class="why-desc">2x Premio al Mejor Asesor en Transacciones Institucionales en Canarias. No es un título honorífico. Es el resultado de cerrar operaciones reales con fondos de inversión internacionales.</div>
         </div>
         <div class="why-item">
           <div class="why-icon">II</div>
-          <div class="why-title">Red de compradores activos</div>
-          <div class="why-desc">Inversores y particulares buscando propiedades ahora mismo en Canarias y Península. Tu propiedad llega a quien puede comprarla, no solo a quien navega portales.</div>
+          <div class="why-title">Mediación con fondos</div>
+          <div class="why-desc">He mediado operaciones de hasta 850.000 euros entre inversores privados y fondos internacionales. Conozco cómo piensan, cómo negocian y qué necesitan para cerrar.</div>
         </div>
         <div class="why-item">
           <div class="why-icon">III</div>
-          <div class="why-title">Sin excusas, con datos</div>
-          <div class="why-desc">El precio lo marca el mercado real, no lo que quieres escuchar. Te digo la verdad antes de firmar nada, no después de meses sin resultados.</div>
+          <div class="why-title">Especialista en NPL</div>
+          <div class="why-desc">La compra de activos NPL tiene un proceso específico que la mayoría de asesores desconoce. Yo lo conozco desde dentro porque es lo que hago cada día.</div>
         </div>
         <div class="why-item">
           <div class="why-icon">IV</div>
-          <div class="why-title">Tú siempre decides</div>
-          <div class="why-desc">Trabajo para conseguirte el mejor resultado, no para cerrar operaciones a cualquier precio. Tu propiedad, tus condiciones, tu ritmo.</div>
+          <div class="why-title">Exclusiva con compromiso real</div>
+          <div class="why-desc">Cuando capto una propiedad en exclusiva, me comprometo por escrito. Una estrategia, un precio, un asesor que responde. No tres agencias compitiendo a la baja.</div>
         </div>
       </div>
     </div>
@@ -124,7 +157,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
       <div class="newsletter-box fade-in">
         <div class="newsletter-left">
           <h2>Análisis de mercado<br><em>cada semana.</em></h2>
-          <p>Datos reales sobre el mercado inmobiliario en Canarias y Península. Sin relleno. Para propietarios e inversores que quieren tomar decisiones con información de calidad.</p>
+          <p>Datos reales sobre inversión inmobiliaria en Canarias. Sin relleno. Para inversores y propietarios que quieren tomar decisiones con información de calidad.</p>
         </div>
         <div class="newsletter-right">
           <a href="https://perfil-inmobiliario-newsletter.beehiiv.com/" target="_blank" rel="noopener" class="btn-primary">Suscribirme gratis</a>
