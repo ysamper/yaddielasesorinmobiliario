@@ -29,9 +29,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     const params = new URLSearchParams(window.location.search);
     const recurso = params.get('recurso');
     const btn = document.getElementById('download-btn');
+    const base = 'https://raw.githubusercontent.com/ysamper/yaddielasesorinmobiliario/main/public/';
     const urls = {
-      checklist: '/checklist-due-diligence-npl-canarias.pdf',
-      guia: '/5-errores-inversores-fondos-espana.pdf'
+      checklist: base + 'checklist-due-diligence-npl-canarias.pdf',
+      guia: base + '5-errores-inversores-fondos-espana.pdf'
     };
     const url = urls[recurso] || urls.checklist;
     btn.href = url;
