@@ -18,6 +18,9 @@ yarn-error.log*
 # Astro cache
 .astro/
 
+# Netlify CLI local state
+.netlify/
+
 # OS
 .DS_Store
 Thumbs.db
