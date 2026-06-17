@@ -9,3 +9,6 @@
   from = "/feed"
   to = "/rss.xml"
   status = 301
+
+[build.processing]
+  skip_processing = false
