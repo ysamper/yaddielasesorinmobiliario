@@ -10,151 +10,229 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   title="Yaddiel Samper | Asesor Inmobiliario y Especialista en NPL en Tenerife"
   description="Especialista en inversión inmobiliaria y activos NPL en Tenerife. 2x Premio al Mejor Asesor en Transacciones Institucionales en Canarias. También capto propiedades en exclusiva.">
 
+  <!-- HERO — Editorial asymmetric split -->
   <section class="hero" id="inicio">
-    <div class="hero-inner hero-split">
+    <div class="hero-grid">
       <div class="hero-content">
-        <h1>El mercado inmobiliario<br>de Tenerife, <em>desde dentro.</em></h1>
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-line"></span>
+          <span class="hero-eyebrow-text">Asesor inmobiliario en Tenerife</span>
+        </div>
+        <h1 class="hero-headline">
+          <span class="hero-line hero-line--1">El mercado inmobiliario</span>
+          <span class="hero-line hero-line--2">de Tenerife, <em>desde dentro.</em></span>
+        </h1>
         <p class="hero-sub">Si eres inversor, te guío en activos NPL y operaciones con fondos. Si quieres vender, trabajo en exclusiva con propietarios que buscan resultados reales.</p>
         <div class="hero-actions">
           <a href="#inversores" class="btn-primary">Soy inversor</a>
           <a href="#valoracion" class="btn-ghost">Quiero vender</a>
         </div>
       </div>
-      <div class="hero-photo">
-        <img src="/yaddiel-samper.jpg" alt="Yaddiel Samper - Asesor Inmobiliario especializado en NPL y activos bancarios en Tenerife" />
+      <div class="hero-photo-col">
+        <div class="hero-photo">
+          <img src="/yaddiel-samper.jpg" alt="Yaddiel Samper - Asesor Inmobiliario especializado en NPL y activos bancarios en Tenerife" />
+          <div class="hero-photo-accent"></div>
+        </div>
+        <div class="hero-photo-badge">
+          <span class="badge-number">2x</span>
+          <span class="badge-text">Premio al Mejor Asesor<br>Transacciones Institucionales</span>
+        </div>
       </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span class="scroll-line"></span>
     </div>
   </section>
 
-  <div class="stats">
+  <!-- STATS — Oversized editorial numbers -->
+  <div class="stats" id="stats">
     <div class="stats-inner">
-      <div class="stat">
-        <div class="stat-num">2x</div>
+      <div class="stat reveal">
+        <div class="stat-number-wrap">
+          <span class="stat-num">2x</span>
+          <span class="stat-accent-dot"></span>
+        </div>
         <div class="stat-label">Premio al Mejor Asesor en<br>Transacciones Institucionales</div>
       </div>
-      <div class="stat">
-        <div class="stat-num">+3</div>
+      <div class="stat-divider reveal"></div>
+      <div class="stat reveal">
+        <div class="stat-number-wrap">
+          <span class="stat-num">+3</span>
+          <span class="stat-accent-dot"></span>
+        </div>
         <div class="stat-label">Años mediando operaciones<br>con fondos de inversión</div>
       </div>
-      <div class="stat">
-        <div class="stat-num">N.1</div>
+      <div class="stat-divider reveal"></div>
+      <div class="stat reveal">
+        <div class="stat-number-wrap">
+          <span class="stat-num">N.1</span>
+          <span class="stat-accent-dot"></span>
+        </div>
         <div class="stat-label">Volumen de transacciones<br>institucionales en Canarias</div>
       </div>
     </div>
   </div>
 
-  <section id="inversores">
+  <!-- INVESTORS — Asymmetric staggered cards -->
+  <section id="inversores" class="section-investors">
     <div class="section-inner">
-      <div class="section-tag fade-in">Para inversores</div>
-      <h2 class="section-title fade-in">Activos NPL y operaciones<br><em>con fondos en Tenerife.</em></h2>
-      <p class="section-intro fade-in">Tenerife combina fiscalidad diferencial, rentabilidad sostenida y demanda estructural que pocas zonas de España pueden igualar. Sé cómo navegar este mercado porque llevo años cerrando operaciones en él.</p>
-      <div class="why-grid fade-in">
-        <div class="why-item">
-          <div class="why-icon">01</div>
-          <div class="why-title">Acceso a activos NPL</div>
-          <div class="why-desc">Tengo acceso directo a carteras de fondos de inversión. Activos que no aparecen en ningún portal y que solo llegan por red y confianza.</div>
+      <div class="section-header-split">
+        <div class="section-header-left">
+          <div class="section-tag reveal">Para inversores</div>
+          <h2 class="section-title reveal">Activos NPL y operaciones<br><em>con fondos en Tenerife.</em></h2>
         </div>
-        <div class="why-item">
-          <div class="why-icon">02</div>
-          <div class="why-title">Proceso completo gestionado</div>
-          <div class="why-desc">Due diligence, negociación con el fondo, cesión de crédito y resolución final. Te acompaño en cada fase sin que te pierdas en el proceso.</div>
-        </div>
-        <div class="why-item">
-          <div class="why-icon">03</div>
-          <div class="why-title">Tenerife como mercado</div>
-          <div class="why-desc">IGIC al 7%, rentabilidad bruta media del 5,5% y el 23,12% de los compradores extranjeros en España eligen Canarias. Los datos respaldan la decisión.</div>
-        </div>
-        <div class="why-item">
-          <div class="why-icon">04</div>
-          <div class="why-title">Sin rodeos</div>
-          <div class="why-desc">Solo hablo con inversores con capacidad real. Si la operación no tiene sentido para ti, te lo digo antes de perder tu tiempo.</div>
+        <div class="section-header-right reveal">
+          <p class="section-intro">Tenerife combina fiscalidad diferencial, rentabilidad sostenida y demanda estructural que pocas zonas de España pueden igualar. Sé cómo navegar este mercado porque llevo años cerrando operaciones en él.</p>
         </div>
       </div>
-      <div class="blog-cta-row fade-in">
+      <div class="investor-grid">
+        <div class="investor-card investor-card--tall reveal">
+          <div class="investor-card-num">01</div>
+          <div class="investor-card-content">
+            <div class="investor-card-title">Acceso a activos NPL</div>
+            <div class="investor-card-desc">Tengo acceso directo a carteras de fondos de inversión. Activos que no aparecen en ningún portal y que solo llegan por red y confianza.</div>
+          </div>
+          <div class="investor-card-line"></div>
+        </div>
+        <div class="investor-card investor-card--offset reveal">
+          <div class="investor-card-num">02</div>
+          <div class="investor-card-content">
+            <div class="investor-card-title">Proceso completo gestionado</div>
+            <div class="investor-card-desc">Due diligence, negociación con el fondo, cesión de crédito y resolución final. Te acompaño en cada fase sin que te pierdas en el proceso.</div>
+          </div>
+          <div class="investor-card-line"></div>
+        </div>
+        <div class="investor-card reveal">
+          <div class="investor-card-num">03</div>
+          <div class="investor-card-content">
+            <div class="investor-card-title">Tenerife como mercado</div>
+            <div class="investor-card-desc">IGIC al 7%, rentabilidad bruta media del 5,5% y el 23,12% de los compradores extranjeros en España eligen Canarias. Los datos respaldan la decisión.</div>
+          </div>
+          <div class="investor-card-line"></div>
+        </div>
+        <div class="investor-card investor-card--offset reveal">
+          <div class="investor-card-num">04</div>
+          <div class="investor-card-content">
+            <div class="investor-card-title">Sin rodeos</div>
+            <div class="investor-card-desc">Solo hablo con inversores con capacidad real. Si la operación no tiene sentido para ti, te lo digo antes de perder tu tiempo.</div>
+          </div>
+          <div class="investor-card-line"></div>
+        </div>
+      </div>
+      <div class="blog-cta-row reveal">
         <a href="https://calendly.com/ysl-yaddielsamper/consulta-gratuita-de-30min" target="_blank" rel="noopener" class="btn-primary">Quiero analizar una operación</a>
       </div>
     </div>
   </section>
 
-  <section id="como-funciona">
+  <!-- SELLERS — Horizontal timeline process -->
+  <section id="como-funciona" class="section-sellers">
     <div class="section-inner">
-      <div class="section-tag fade-in">Para vendedores</div>
-      <h2 class="section-title fade-in">Vende con estrategia.<br><em>No con prisa.</em></h2>
-      <div class="process-grid fade-in">
-        <div class="process-item">
-          <div class="process-num">01</div>
-          <div class="process-title">Solicitas tu valoración</div>
-          <div class="process-desc">Cuéntame lo básico sobre tu propiedad. Tarda menos de 2 minutos. Sin compromiso.</div>
+      <div class="section-tag reveal">Para vendedores</div>
+      <h2 class="section-title reveal">Vende con estrategia.<br><em>No con prisa.</em></h2>
+      <div class="process-timeline">
+        <div class="process-track"></div>
+        <div class="process-step reveal">
+          <div class="process-marker">
+            <span class="process-num">01</span>
+          </div>
+          <div class="process-content">
+            <div class="process-title">Solicitas tu valoración</div>
+            <div class="process-desc">Cuéntame lo básico sobre tu propiedad. Tarda menos de 2 minutos. Sin compromiso.</div>
+          </div>
         </div>
-        <div class="process-item">
-          <div class="process-num">02</div>
-          <div class="process-title">Recibes tu informe en 24h</div>
-          <div class="process-desc">Precio real de mercado, tiempo estimado de venta y estrategia recomendada. Sin adornos.</div>
+        <div class="process-step reveal">
+          <div class="process-marker">
+            <span class="process-num">02</span>
+          </div>
+          <div class="process-content">
+            <div class="process-title">Recibes tu informe en 24h</div>
+            <div class="process-desc">Precio real de mercado, tiempo estimado de venta y estrategia recomendada. Sin adornos.</div>
+          </div>
         </div>
-        <div class="process-item">
-          <div class="process-num">03</div>
-          <div class="process-title">Trabajamos en exclusiva</div>
-          <div class="process-desc">Si tiene sentido trabajar juntos, firmo un compromiso real contigo. Un asesor, una estrategia, un resultado.</div>
+        <div class="process-step reveal">
+          <div class="process-marker">
+            <span class="process-num">03</span>
+          </div>
+          <div class="process-content">
+            <div class="process-title">Trabajamos en exclusiva</div>
+            <div class="process-desc">Si tiene sentido trabajar juntos, firmo un compromiso real contigo. Un asesor, una estrategia, un resultado.</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="por-que">
+  <!-- DIFFERENTIATORS — Full-bleed editorial with Roman numerals -->
+  <section id="por-que" class="section-diff">
     <div class="section-inner">
-      <div class="section-tag fade-in">La diferencia</div>
-      <h2 class="section-title fade-in">Por qué no soy<br><em>un asesor más.</em></h2>
-      <div class="why-grid fade-in">
-        <div class="why-item">
-          <div class="why-icon">I</div>
-          <div class="why-title">Dos premios que lo demuestran</div>
-          <div class="why-desc">2x Premio al Mejor Asesor en Transacciones Institucionales en Canarias. No es un título honorífico. Es el resultado de cerrar operaciones reales con fondos de inversión internacionales.</div>
+      <div class="diff-header">
+        <div class="section-tag reveal">La diferencia</div>
+        <h2 class="section-title section-title--large reveal">Por qué no soy<br><em>un asesor más.</em></h2>
+      </div>
+      <div class="diff-grid">
+        <div class="diff-item reveal">
+          <div class="diff-roman">I</div>
+          <div class="diff-content">
+            <div class="diff-title">Dos premios que lo demuestran</div>
+            <div class="diff-desc">2x Premio al Mejor Asesor en Transacciones Institucionales en Canarias. No es un título honorífico. Es el resultado de cerrar operaciones reales con fondos de inversión internacionales.</div>
+          </div>
         </div>
-        <div class="why-item">
-          <div class="why-icon">II</div>
-          <div class="why-title">Mediación con fondos</div>
-          <div class="why-desc">He mediado operaciones de hasta 850.000 euros entre inversores privados y fondos internacionales. Conozco cómo piensan, cómo negocian y qué necesitan para cerrar.</div>
+        <div class="diff-item reveal">
+          <div class="diff-roman">II</div>
+          <div class="diff-content">
+            <div class="diff-title">Mediación con fondos</div>
+            <div class="diff-desc">He mediado operaciones de hasta 850.000 euros entre inversores privados y fondos internacionales. Conozco cómo piensan, cómo negocian y qué necesitan para cerrar.</div>
+          </div>
         </div>
-        <div class="why-item">
-          <div class="why-icon">III</div>
-          <div class="why-title">Especialista en NPL</div>
-          <div class="why-desc">La compra de activos NPL tiene un proceso específico que la mayoría de asesores desconoce. Yo lo conozco desde dentro porque es lo que hago cada día.</div>
+        <div class="diff-item reveal">
+          <div class="diff-roman">III</div>
+          <div class="diff-content">
+            <div class="diff-title">Especialista en NPL</div>
+            <div class="diff-desc">La compra de activos NPL tiene un proceso específico que la mayoría de asesores desconoce. Yo lo conozco desde dentro porque es lo que hago cada día.</div>
+          </div>
         </div>
-        <div class="why-item">
-          <div class="why-icon">IV</div>
-          <div class="why-title">Exclusiva con compromiso real</div>
-          <div class="why-desc">Cuando capto una propiedad en exclusiva, me comprometo por escrito. Una estrategia, un precio, un asesor que responde. No tres agencias compitiendo a la baja.</div>
+        <div class="diff-item reveal">
+          <div class="diff-roman">IV</div>
+          <div class="diff-content">
+            <div class="diff-title">Exclusiva con compromiso real</div>
+            <div class="diff-desc">Cuando capto una propiedad en exclusiva, me comprometo por escrito. Una estrategia, un precio, un asesor que responde. No tres agencias compitiendo a la baja.</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="blog">
+  <!-- BLOG — Asymmetric editorial grid -->
+  <section id="blog" class="section-blog">
     <div class="section-inner">
-      <div class="section-tag fade-in">Mercado inmobiliario</div>
-      <h2 class="section-title fade-in">Artículos y<br><em>análisis de mercado.</em></h2>
-      <div class="blog-grid fade-in">
-        {posts.map(post => (
-          <a href={`/blog/${post.slug}`} class="blog-card">
-            <span class="blog-card-tag">{post.data.pillar ?? 'Artículo'}</span>
-            <div class="blog-card-title">{post.data.title}</div>
-            <div class="blog-card-excerpt">{post.data.description}</div>
-            <div class="blog-card-footer">
-              <span class="blog-card-date">{post.data.pubDate.toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })}</span>
-              <span class="blog-card-arrow">→</span>
+      <div class="section-tag reveal">Mercado inmobiliario</div>
+      <h2 class="section-title reveal">Artículos y<br><em>análisis de mercado.</em></h2>
+      <div class="blog-grid">
+        {posts.map((post, i) => (
+          <a href={`/blog/${post.slug}`} class={`blog-card blog-card--${i === 0 ? 'featured' : 'standard'} reveal`}>
+            <div class="blog-card-inner">
+              <span class="blog-card-tag">{post.data.pillar ?? 'Artículo'}</span>
+              <div class="blog-card-title">{post.data.title}</div>
+              <div class="blog-card-excerpt">{post.data.description}</div>
+              <div class="blog-card-footer">
+                <span class="blog-card-date">{post.data.pubDate.toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })}</span>
+                <span class="blog-card-arrow">&rarr;</span>
+              </div>
             </div>
           </a>
         ))}
       </div>
-      <div class="blog-cta-row fade-in">
+      <div class="blog-cta-row reveal">
         <a href="/blog" class="btn-outline">Ver todos los artículos</a>
       </div>
     </div>
   </section>
 
+  <!-- NEWSLETTER — Bold contrast section -->
   <section class="newsletter-section" id="newsletter">
     <div class="section-inner">
-      <div class="newsletter-box fade-in">
+      <div class="newsletter-box reveal">
         <div class="newsletter-left">
           <h2>Análisis de mercado<br><em>cada semana.</em></h2>
           <p>Datos reales sobre inversión inmobiliaria en Canarias. Sin relleno. Para inversores y propietarios que quieren tomar decisiones con información de calidad.</p>
@@ -166,10 +244,11 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
     </div>
   </section>
 
+  <!-- CONTACT / MAP -->
   <section class="map-section" id="contacto">
     <div class="section-inner">
-      <div class="section-tag fade-in">Dónde encontrarme</div>
-      <div class="map-grid fade-in">
+      <div class="section-tag reveal">Dónde encontrarme</div>
+      <div class="map-grid reveal">
         <div class="map-info">
           <h3>Visítame en<br><em>la oficina.</em></h3>
           <div class="map-detail">
@@ -213,13 +292,15 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
     </div>
   </section>
 
-  <section id="resenas">
+  <!-- REVIEWS — Editorial testimonial layout -->
+  <section id="resenas" class="section-reviews">
     <div class="section-inner">
-      <div class="section-tag fade-in">Lo que dicen los clientes</div>
-      <h2 class="section-title fade-in">Resultados que<br><em>hablan por sí solos.</em></h2>
-      <div class="reviews-grid fade-in">
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
+      <div class="section-tag reveal">Lo que dicen los clientes</div>
+      <h2 class="section-title reveal">Resultados que<br><em>hablan por sí solos.</em></h2>
+      <div class="reviews-grid">
+        <div class="review-card reveal">
+          <div class="review-quote-mark">&ldquo;</div>
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p class="review-text">"Muy profesional, me proporcionó todas las herramientas necesarias para comprar mi casa con toda seguridad!!"</p>
           <div class="review-author">
             <div class="review-avatar">SR</div>
@@ -229,8 +310,9 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
             </div>
           </div>
         </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
+        <div class="review-card review-card--elevated reveal">
+          <div class="review-quote-mark">&ldquo;</div>
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p class="review-text">"Yaddiel es un excelente profesional. Me guió en todo el proceso de compra y siempre estuvo atento a todas mis inquietudes. Sin duda, totalmente recomendable."</p>
           <div class="review-author">
             <div class="review-avatar">NG</div>
@@ -240,8 +322,9 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
             </div>
           </div>
         </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
+        <div class="review-card reveal">
+          <div class="review-quote-mark">&ldquo;</div>
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p class="review-text">"Una atención excelente. Profesionalismo, compromiso y dedicación. Su alto conocimiento del mercado fue clave para tomar decisiones acertadas. Totalmente recomendable."</p>
           <div class="review-author">
             <div class="review-avatar">JP</div>
@@ -252,15 +335,17 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
           </div>
         </div>
       </div>
-      <div class="reviews-cta fade-in">
-        <a href="https://share.google/79IdYMV3JquUvFMYU" target="_blank" rel="noopener">Ver todas las reseñas en Google →</a>
+      <div class="reviews-cta reveal">
+        <a href="https://share.google/79IdYMV3JquUvFMYU" target="_blank" rel="noopener">Ver todas las reseñas en Google &rarr;</a>
       </div>
     </div>
   </section>
 
+  <!-- VALUATION CTA — Dramatic final conversion -->
   <section class="cta-section" id="valoracion">
     <div class="section-inner">
-      <div class="cta-box fade-in">
+      <div class="cta-box reveal">
+        <div class="cta-ornament"></div>
         <h2>Solicita tu<br><em>valoración gratuita</em></h2>
         <p>Recibes un informe personalizado con el precio real de mercado de tu propiedad en menos de 24 horas. Sin compromiso. Sin presión.</p>
         <div class="rgpd-wrap">
@@ -277,7 +362,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
     const cb = document.getElementById('rgpd-consent');
     const btn = document.getElementById('lystos-btn');
     cb?.addEventListener('change', () => {
-      if (cb.checked) btn?.classList.remove('btn-primary-disabled');
+      if ((cb as HTMLInputElement).checked) btn?.classList.remove('btn-primary-disabled');
       else btn?.classList.add('btn-primary-disabled');
     });
   </script>
