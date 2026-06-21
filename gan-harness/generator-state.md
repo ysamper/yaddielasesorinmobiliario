@@ -1,43 +1,45 @@
-# Generator State -- Iteration 003
+# Generator State -- Iteration 004
 
 ## What Was Built
-- Complete editorial redesign with dramatic layout changes
-- Sticky heading + scrolling cards layout for investors section
-- Dark section (ink background) for differentiators with oversized watermark numerals
-- Horizontal scroll-snap reviews carousel
-- Frosted glass stats bar with aggressive -7rem hero overlap
-- Counter animation on stats (count from 0, typewriter for N.1)
-- Timeline progressive fill on scroll
-- CSS parallax on hero photo
-- Diagonal clip-path section transitions
-- Mixed font weight hero typography (300 + 600) at 8rem max
+- All Iteration 3 features plus major visual upgrades targeting 7.5+ threshold
+- Hero with dramatic size contrast (5.5rem light / 10rem bold) + headline bleeds into photo column
+- Fixed: Hero parallax transform bug (JS now composes with CSS 3D transform)
+- Differentiators section pushed to extreme editorial (16rem watermark numerals, gold gradient wash)
+- Featured blog card with dark (ink) treatment at 1.6rem title
+- CTA valuation box on dark (ink) background with gold corner brackets
+- Investor cards architectural (no border-radius, structural top border)
+- Seller timeline bodies have rounded cards with warm treatment
+- Featured review card larger (460px) with gold-tinted background
+- Hero image served as WebP via `<picture>` element (215KB → 77KB)
 
 ## What Changed This Iteration
-- Fixed: Stats bar now overlaps hero by -7rem with frosted glass backdrop-filter
-- Fixed: Investors section uses sticky heading on left, single-column cards on right
-- Fixed: Differentiators is now a dark (ink) section with oversized 9rem watermark numerals
-- Fixed: Reviews use horizontal scroll snap instead of 3-column grid
-- Fixed: Diagonal clip-path transitions between sellers/differentiators
-- Fixed: Varied padding rhythm across all sections (not uniform 8rem)
-- Fixed: Hero headline at 8rem max with mixed font weights (light + bold)
-- Fixed: Card description text bumped to 0.9rem from 0.84rem
-- Fixed: Global :focus-visible on all interactive elements
-- Fixed: prefers-reduced-motion media query disables all animations
-- Fixed: Mobile drawer has backdrop overlay + body scroll lock
-- Fixed: Escape key closes mobile menu
-- Fixed: Hero image has loading="eager" and fetchpriority="high"
-- Fixed: Google Maps iframe has width/height attributes
-- Fixed: RGPD hint text explains disabled button state
-- Added: "Inversores" nav link for investor navigation path
-- Added: Differentiated scroll animations (scale, translateX, stagger delays)
-- Added: Large decorative background number "03" behind sellers section
-- Added: Watermark numbers (8rem) behind investor cards
+- Fixed: Hero parallax JS now composes transforms: `translateZ(-100px) scale(1.08) translateY(offset)`
+- Fixed: `html { scroll-padding-top: 100px }` for anchor navigation
+- Fixed: `aria-disabled="true"` on RGPD CTA button, toggled via JS
+- Fixed: Timeline scroll handler uses RAF throttle guard
+- Added: "Vendedores" nav link pointing to `#como-funciona`
+- Added: `<picture>` with WebP source for hero image (64% size reduction)
+- Changed: Hero headline uses SIZE + weight contrast (light 5.5rem / bold 10rem)
+- Changed: Hero headline bleeds -7rem into photo column for editorial overlap
+- Changed: Diagonal clip-paths bolder at 7rem (was 4rem), 4rem on mobile (was 2rem)
+- Changed: Differentiators numerals at 16rem (was 9rem) with gold gradient wash background
+- Changed: Diff items use 16rem numeral column (was 10rem) with 4rem padding (was 3rem)
+- Changed: Diff header title at 5rem max for scale
+- Changed: Investor cards sharp/architectural: border-radius 0, structural gold top border
+- Changed: Seller section warm gradient background, timeline bodies have rounded cards
+- Changed: Featured blog card has dark ink background with light text and larger title
+- Changed: CTA box dark background with cream text and gold-warm accents
+- Changed: Corner brackets larger (48px) and more visible (50% opacity)
+- Changed: Contact/map section uses cream-deep background for differentiation
+- Changed: First review card featured at 460px with gold-tinted gradient
+- Changed: RGPD checkbox/label styled for dark context
+- Changed: Diff title bumped to 1.6rem, desc line-height to 1.85
 
 ## Known Issues
-- Hero photo is still 210KB JPEG (no AVIF/WebP alternative added)
-- CSS remains in single file (acceptable for single-page site)
+- No AVIF alternative (WebP only)
+- CSS remains in single file (acceptable at 48KB / 9.5KB gzipped)
 
-## Dev Server
-- URL: http://localhost:4321
-- Status: running
-- Command: npm run dev
+## Build Stats
+- 21 pages in 1.53s
+- CSS: 1748 lines, 48KB raw, 9.5KB gzipped
+- Hero image: 77KB WebP (was 215KB JPEG)

@@ -31,7 +31,10 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         </div>
         <div class="hero-photo-col">
           <div class="hero-photo-wrap">
-            <img src="/yaddiel-samper.jpg" alt="Yaddiel Samper - Asesor Inmobiliario especializado en NPL y activos bancarios en Tenerife" class="hero-img" width="380" height="480" loading="eager" fetchpriority="high" />
+            <picture>
+              <source srcset="/yaddiel-samper.webp" type="image/webp" />
+              <img src="/yaddiel-samper.jpg" alt="Yaddiel Samper - Asesor Inmobiliario especializado en NPL y activos bancarios en Tenerife" class="hero-img" width="380" height="480" loading="eager" fetchpriority="high" />
+            </picture>
             <div class="hero-photo-frame"></div>
           </div>
           <div class="hero-badge">
@@ -359,7 +362,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
           <input type="checkbox" id="rgpd-consent" />
           <label for="rgpd-consent">Acepto recibir comunicaciones comerciales de Yaddiel Samper relacionadas con mi propiedad y el proceso de venta. Puedo revocar este consentimiento en cualquier momento. <a href="/privacidad">Política de privacidad</a>.</label>
         </div>
-        <a href="https://valuation.lystos.com?clientId=2f57af09-10e9-47ce-a505-281fa60511e3" class="btn-primary btn-primary-disabled" id="lystos-btn" target="_blank" rel="noopener">Quiero mi valoración gratuita</a>
+        <a href="https://valuation.lystos.com?clientId=2f57af09-10e9-47ce-a505-281fa60511e3" class="btn-primary btn-primary-disabled" id="lystos-btn" target="_blank" rel="noopener" aria-disabled="true">Quiero mi valoración gratuita</a>
         <p class="cta-hint" id="rgpd-hint">Marca la casilla para continuar</p>
         <p class="cta-disclaimer">Datos protegidos bajo el RGPD. Nunca compartidos con terceros.</p>
       </div>
@@ -374,9 +377,11 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
       const checked = (cb as HTMLInputElement).checked;
       if (checked) {
         btn?.classList.remove('btn-primary-disabled');
+        btn?.setAttribute('aria-disabled', 'false');
         hint?.classList.add('cta-hint--hidden');
       } else {
         btn?.classList.add('btn-primary-disabled');
+        btn?.setAttribute('aria-disabled', 'true');
         hint?.classList.remove('cta-hint--hidden');
       }
     });

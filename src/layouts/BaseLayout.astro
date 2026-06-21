@@ -234,6 +234,7 @@ const props = Astro.props;
         steps.forEach(step => timelineObserver.observe(step));
 
         if (trackFill) {
+          let fillTicking = false;
           const updateFill = () => {
             const rect = timeline.getBoundingClientRect();
             const windowH = window.innerHeight;
@@ -246,7 +247,15 @@ const props = Astro.props;
             trackFill.style.height = (pct * 100) + '%';
           };
 
-          window.addEventListener('scroll', updateFill, { passive: true });
+          window.addEventListener('scroll', () => {
+            if (!fillTicking) {
+              requestAnimationFrame(() => {
+                updateFill();
+                fillTicking = false;
+              });
+              fillTicking = true;
+            }
+          }, { passive: true });
           updateFill();
         }
       }
@@ -262,7 +271,7 @@ const props = Astro.props;
             requestAnimationFrame(() => {
               const scrollY = window.scrollY;
               const offset = scrollY * 0.12;
-              heroPhoto.style.transform = `translateY(${offset}px)`;
+              heroPhoto.style.transform = `translateZ(-100px) scale(1.08) translateY(${offset}px)`;
               ticking = false;
             });
             ticking = true;
