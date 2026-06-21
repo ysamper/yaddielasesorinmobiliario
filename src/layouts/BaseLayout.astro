@@ -129,19 +129,144 @@ const props = Astro.props;
     <Footer />
     <CookieConsent />
     <script>
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, i) => {
+      /* ============================================================
+         Scroll reveal observer with stagger support
+         ============================================================ */
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setTimeout(() => entry.target.classList.add('visible'), i * 80);
+            const el = entry.target as HTMLElement;
+            const delay = parseInt(el.style.getPropertyValue('--reveal-delay') || '0', 10);
+            setTimeout(() => el.classList.add('visible'), delay);
+            revealObserver.unobserve(el);
           }
         });
       }, { threshold: 0.1 });
-      document.querySelectorAll('.fade-in, .reveal').forEach(el => observer.observe(el));
+      document.querySelectorAll('.fade-in, .reveal').forEach(el => revealObserver.observe(el));
 
+      /* ============================================================
+         Nav compact on scroll
+         ============================================================ */
       const nav = document.querySelector('nav.site-nav');
       if (nav) {
         window.addEventListener('scroll', () => {
           nav.classList.toggle('scrolled', window.scrollY > 60);
+        }, { passive: true });
+      }
+
+      /* ============================================================
+         Stats counter animation
+         ============================================================ */
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          const statNums = entry.target.querySelectorAll('.stat-num[data-count]');
+          statNums.forEach((el) => {
+            const target = parseInt(el.getAttribute('data-count') || '0', 10);
+            const prefix = el.getAttribute('data-prefix') || '';
+            const suffix = el.getAttribute('data-suffix') || '';
+
+            if (prefersReducedMotion) {
+              el.textContent = prefix + target + suffix;
+              return;
+            }
+
+            let current = 0;
+            const duration = 1200;
+            const startTime = performance.now();
+
+            function animate(now: number) {
+              const elapsed = now - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              current = Math.round(eased * target);
+              el.textContent = prefix + current + suffix;
+              if (progress < 1) requestAnimationFrame(animate);
+            }
+            requestAnimationFrame(animate);
+          });
+
+          const typewriter = entry.target.querySelector('.stat-num[data-typewriter]');
+          if (typewriter) {
+            const text = typewriter.getAttribute('data-typewriter') || '';
+            if (prefersReducedMotion) {
+              typewriter.textContent = text;
+            } else {
+              typewriter.textContent = '';
+              let i = 0;
+              function type() {
+                if (i < text.length) {
+                  typewriter!.textContent += text[i];
+                  i++;
+                  setTimeout(type, 200);
+                }
+              }
+              setTimeout(type, 400);
+            }
+          }
+
+          statsObserver.unobserve(entry.target);
+        });
+      }, { threshold: 0.3 });
+
+      const statsInner = document.querySelector('.stats-inner');
+      if (statsInner) statsObserver.observe(statsInner);
+
+      /* ============================================================
+         Timeline progressive fill on scroll
+         ============================================================ */
+      const timeline = document.querySelector('[data-timeline]');
+      if (timeline && !prefersReducedMotion) {
+        const trackFill = timeline.querySelector('.timeline-track-fill') as HTMLElement;
+        const steps = timeline.querySelectorAll('.timeline-step');
+
+        const timelineObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('timeline-step--active');
+            }
+          });
+        }, { threshold: 0.5 });
+
+        steps.forEach(step => timelineObserver.observe(step));
+
+        if (trackFill) {
+          const updateFill = () => {
+            const rect = timeline.getBoundingClientRect();
+            const windowH = window.innerHeight;
+            const totalH = rect.height;
+
+            if (rect.top > windowH || rect.bottom < 0) return;
+
+            const scrolledInto = windowH - rect.top;
+            const pct = Math.max(0, Math.min(scrolledInto / totalH, 1));
+            trackFill.style.height = (pct * 100) + '%';
+          };
+
+          window.addEventListener('scroll', updateFill, { passive: true });
+          updateFill();
+        }
+      }
+
+      /* ============================================================
+         Hero parallax on scroll (CSS only backup: translateZ)
+         ============================================================ */
+      const heroPhoto = document.querySelector('.hero-photo-col') as HTMLElement;
+      if (heroPhoto && !prefersReducedMotion && window.innerWidth > 768) {
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+          if (!ticking) {
+            requestAnimationFrame(() => {
+              const scrollY = window.scrollY;
+              const offset = scrollY * 0.12;
+              heroPhoto.style.transform = `translateY(${offset}px)`;
+              ticking = false;
+            });
+            ticking = true;
+          }
         }, { passive: true });
       }
     </script>
