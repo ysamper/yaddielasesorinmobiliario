@@ -122,8 +122,9 @@ const props = Astro.props;
     </script>
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Saltar al contenido</a>
     <Nav />
-    <main>
+    <main id="main-content">
       <slot />
     </main>
     <Footer />
