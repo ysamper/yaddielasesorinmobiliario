@@ -2,9 +2,32 @@
 ---
 <nav class="site-nav">
   <a href="/" class="nav-brand">Yaddiel <span>Samper</span></a>
+  <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+  </button>
   <div class="nav-actions">
     <a href="/blog" class="nav-link">Blog</a>
     <a href="/recursos" class="nav-link">Recursos gratis</a>
     <a href="/#valoracion" class="nav-cta">Valoración gratuita</a>
   </div>
 </nav>
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const actions = document.querySelector('.nav-actions');
+  if (toggle && actions) {
+    toggle.addEventListener('click', () => {
+      const open = actions.classList.toggle('nav-open');
+      toggle.classList.toggle('nav-toggle--open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    actions.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        actions.classList.remove('nav-open');
+        toggle.classList.remove('nav-toggle--open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>

@@ -136,7 +136,14 @@ const props = Astro.props;
           }
         });
       }, { threshold: 0.1 });
-      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+      document.querySelectorAll('.fade-in, .reveal').forEach(el => observer.observe(el));
+
+      const nav = document.querySelector('nav.site-nav');
+      if (nav) {
+        window.addEventListener('scroll', () => {
+          nav.classList.toggle('scrolled', window.scrollY > 60);
+        }, { passive: true });
+      }
     </script>
   </body>
 </html>

@@ -108,6 +108,29 @@ nav.site-nav.scrolled {
   box-shadow: 0 4px 16px rgba(122,92,16,0.2);
 }
 
+/* Hamburger toggle */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 110;
+}
+.nav-toggle-bar {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--ink);
+  transition: all 0.3s var(--ease-out-expo);
+  transform-origin: center;
+}
+.nav-toggle--open .nav-toggle-bar:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-toggle--open .nav-toggle-bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-toggle--open .nav-toggle-bar:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
 /* ================================================================
    HERO — Full-viewport editorial split
    ================================================================ */
@@ -193,11 +216,11 @@ nav.site-nav.scrolled {
   opacity: 0;
 }
 .hero-line--1 {
-  font-size: clamp(2.8rem, 5.2vw, 4.6rem);
+  font-size: clamp(3rem, 6.5vw, 6rem);
   animation: revealBlur 1s var(--ease-out-expo) 0.2s forwards;
 }
 .hero-line--2 {
-  font-size: clamp(2.8rem, 5.2vw, 4.6rem);
+  font-size: clamp(3rem, 6.5vw, 6rem);
   animation: revealBlur 1s var(--ease-out-expo) 0.35s forwards;
 }
 .hero-headline em {
@@ -455,7 +478,7 @@ nav.site-nav.scrolled {
   padding: 0 3rem;
   position: relative;
   z-index: 10;
-  margin-top: -1.5rem;
+  margin-top: -3.5rem;
 }
 
 .stats-inner {
@@ -554,7 +577,7 @@ section::after {
   letter-spacing: -0.02em;
 }
 .section-title em { font-style: italic; color: var(--gold); }
-.section-title--xl { font-size: clamp(2.4rem, 5vw, 3.8rem); }
+.section-title--xl { font-size: clamp(2.6rem, 5.5vw, 4.5rem); }
 
 .section-intro {
   font-size: 1rem;
@@ -767,14 +790,14 @@ section::after {
 
 .diff-numeral {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 2.8rem;
+  font-size: 4.5rem;
   font-weight: 300;
   font-style: italic;
-  color: var(--cream-dark);
-  line-height: 1;
-  min-width: 3rem;
-  transition: color 0.4s ease;
-  letter-spacing: -0.02em;
+  color: var(--cream-mid);
+  line-height: 0.85;
+  min-width: 4rem;
+  transition: color 0.5s var(--ease-out-expo);
+  letter-spacing: -0.04em;
 }
 .diff-card:hover .diff-numeral { color: var(--gold); }
 
@@ -1368,6 +1391,25 @@ footer {
 @media (max-width: 768px) {
   nav.site-nav { padding: 1rem 1.25rem; }
   nav.site-nav.scrolled { padding: 0.65rem 1.25rem; }
+
+  .nav-toggle { display: flex; }
+  .nav-actions {
+    position: fixed;
+    top: 0; right: 0;
+    width: 280px; height: 100dvh;
+    background: var(--cream);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem 2rem 2rem;
+    gap: 1.5rem;
+    box-shadow: -8px 0 32px rgba(0,0,0,0.08);
+    transform: translateX(100%);
+    transition: transform 0.4s var(--ease-out-expo);
+    z-index: 105;
+  }
+  .nav-actions.nav-open { transform: translateX(0); }
+  .nav-link { font-size: 0.9rem; }
+  .nav-cta { width: 100%; text-align: center; }
 
   .hero-grid {
     grid-template-columns: 1fr;
