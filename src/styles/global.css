@@ -1206,7 +1206,8 @@ section::after {
   font-weight: 300;
   max-width: 420px;
 }
-.newsletter-right { flex: 0 0 auto; }
+.newsletter-right { flex: 0 0 auto; width: 100%; max-width: 420px; }
+.newsletter-right iframe { border-radius: 12px; }
 
 /* Inverted button for dark bg */
 .newsletter-section .btn-primary {
