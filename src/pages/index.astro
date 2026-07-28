@@ -427,5 +427,15 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         hint?.classList.remove('cta-hint--hidden');
       }
     });
+    // Bloquea la navegación por teclado (Tab + Enter/Espacio) cuando el
+    // consentimiento RGPD no está marcado. pointer-events:none solo bloquea
+    // el ratón, no la activación por teclado en un <a href>.
+    btn?.addEventListener('click', (e) => {
+      if (btn.getAttribute('aria-disabled') === 'true') {
+        e.preventDefault();
+        cb?.focus();
+        hint?.classList.remove('cta-hint--hidden');
+      }
+    });
   </script>
 </BaseLayout>

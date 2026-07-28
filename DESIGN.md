@@ -44,13 +44,14 @@ acento del 10%.
 
 ## Deuda de diseño conocida (pendiente de fix)
 
-- `--text-dim` (#968E84) sobre `--cream` (#F8F6F1) da ~3:1 de contraste. Se usa en
-  `.blog-card-date`, `.review-author-info span` y `.article-date`, todos a 0.7–0.78rem.
-  Falla WCAG AA (necesita 4.5:1 a ese tamaño).
-- `.nav-toggle` mide ~38×30px de touch target real. Por debajo del mínimo de 44px.
 - `.article-body blockquote` usa `border-left: 2px solid var(--gold)`, patrón de
   acento lateral que la propia skill impeccable prohíbe explícitamente.
-- El botón de valoración (`#lystos-btn`) se bloquea visualmente con
-  `pointer-events: none` cuando el RGPD no está marcado, pero sigue siendo un `<a>`
-  navegable por teclado (Tab + Enter) sin que el JS intercepte el evento `click`.
-  El consentimiento se puede saltar por teclado.
+- `.nav-toggle` mide ~38×30px de touch target real. Por debajo del mínimo de 44px.
+
+## Resuelto
+
+- ~~`--text-dim` (#968E84) sobre `--cream` daba ~3:1 de contraste~~. Corregido a
+  `#767068`, 4.53:1, cumple WCAG AA para el texto pequeño donde se usa.
+- ~~El botón de valoración se podía activar por teclado saltándose el consentimiento
+  RGPD~~. Corregido: el `click` handler ahora comprueba `aria-disabled` y hace
+  `preventDefault()`, moviendo el foco al checkbox.
