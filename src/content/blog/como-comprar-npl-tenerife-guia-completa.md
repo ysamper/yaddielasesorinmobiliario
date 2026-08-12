@@ -30,7 +30,7 @@ Tres factores hacen de Canarias un mercado con oportunidades reales para el inve
 
 **Demanda estructural sostenida.** El 23,12% de los compradores extranjeros en España eligieron Canarias en el último periodo registrado, según el Colegio de Registradores. Esa demanda no depende del ciclo económico peninsular. Un activo recuperado en Tenerife tiene mercado comprador.
 
-**Rentabilidad que soporta el riesgo.** La rentabilidad bruta media en Canarias es del 5,5%. Para un inversor que adquiere un activo con descuento sobre la deuda, el potencial de rentabilidad final es significativamente superior.
+**Rentabilidad que soporta el riesgo.** La rentabilidad bruta media en Canarias es del 5,8% en el segundo trimestre de 2026, según Fotocasa. Para un inversor que adquiere un activo con descuento sobre la deuda, el potencial de rentabilidad final es significativamente superior.
 
 **Fiscalidad diferencial.** El IGIC canario es del 7%, frente al IVA peninsular del 21%. En operaciones de cierto volumen, ese diferencial tiene impacto real en la estructura de la operación.
 
