@@ -13,7 +13,8 @@ Split de contenido objetivo: 60% inversor / 40% vendedor.
 
 Yaddiel Samper Leal. Asesor inmobiliario, Century 21 Lighthouse, Santa Cruz de Tenerife.
 Especialista en NPL (Non-Performing Loans) y transacciones institucionales.
-3x Premio GOAL Mejor Asesor en Transacciones Institucionales Canarias.
+3x Premio GOAL Mejor Asesor en Transacciones Institucionales Canarias
+(Century 21 España; el más reciente, Q3 2026).
 
 Posicionamiento: "Asesoro a inversores que quieren comprar activos inmobiliarios en Tenerife,
 incluyendo NPLs y activos bancarios, sin perderse en el proceso ni cometer errores costosos."

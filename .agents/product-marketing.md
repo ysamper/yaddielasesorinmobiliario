@@ -11,7 +11,7 @@
 Asesor inmobiliario especializado en inversión y activos NPL en Tenerife, con acceso directo a fondos de inversión internacionales.
 
 **What he does:**
-Mediates operations between private investors and investment funds for NPL and institutional asset purchases in the Canary Islands. Also captures residential properties under exclusive listing agreements. 3 years in sector. 3x GOAL Award — Best Advisor for Institutional Transactions in Canarias (Century 21 España).
+Mediates operations between private investors and investment funds for NPL and institutional asset purchases in the Canary Islands. Also captures residential properties under exclusive listing agreements. 3 years in sector. 3x GOAL Award — Best Advisor for Institutional Transactions in Canarias (Century 21 España, most recent Q3 2026).
 
 **Company:** Century 21 Lighthouse, Santa Cruz de Tenerife
 **Type:** Personal brand / professional services / real estate advisory
@@ -92,7 +92,7 @@ Mediates operations between private investors and investment funds for NPL and i
 - Newsletter subscribers: small but growing
 - Operations closed 2024: ~5 at average ticket of 150,000€
 - Active operations: 850,000€ (investor + fund) + 7,000,000€ (Empuriabrava nautical club)
-- Awards: 3x GOAL Award Institutional Transactions Canarias
+- Awards: 3x GOAL Award Institutional Transactions Canarias (most recent Q3 2026)
 
 **Main growth levers:**
 1. LinkedIn content consistency (3-4 posts/week)
