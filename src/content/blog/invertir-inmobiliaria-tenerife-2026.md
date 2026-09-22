@@ -104,7 +104,7 @@ Para el inversor en activos turísticos con licencia, el sur sigue siendo la zon
 
 ## Cómo trabajo con inversores en Tenerife
 
-Llevo tres años asesorando a inversores que quieren entrar en el mercado canario, con especial foco en activos NPL y transacciones institucionales. Dos premios al mejor asesor en transacciones institucionales en Canarias respaldan ese trabajo.
+Llevo tres años asesorando a inversores que quieren entrar en el mercado canario, con especial foco en activos NPL y transacciones institucionales. Tres premios al mejor asesor en transacciones institucionales en Canarias respaldan ese trabajo.
 
 Lo que ofrezco no es acceso a los mismos activos que aparecen en cualquier portal. Es acceso a operaciones que llegan por red y confianza, con análisis previo completo y acompañamiento en cada fase del proceso.
 
@@ -112,4 +112,4 @@ Si tienes capital disponible y quieres analizar si el mercado de Tenerife encaja
 
 ---
 
-*Yaddiel Samper. Asesor inmobiliario especializado en inversión y activos NPL en Tenerife. Century 21 Lighthouse. 2x Premio al Mejor Asesor en Transacciones Institucionales en Canarias.*
+*Yaddiel Samper. Asesor inmobiliario especializado en inversión y activos NPL en Tenerife. Century 21 Lighthouse. 3x Premio al Mejor Asesor en Transacciones Institucionales en Canarias.*

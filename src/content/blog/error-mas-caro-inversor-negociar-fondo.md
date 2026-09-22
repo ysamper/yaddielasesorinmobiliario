@@ -68,4 +68,4 @@ Si estás analizando una operación con un fondo y quieres revisar la estrategia
 
 ---
 
-*Yaddiel Samper. Asesor inmobiliario especializado en inversión y activos NPL en Tenerife. Century 21 Lighthouse. 2x Premio al Mejor Asesor en Transacciones Institucionales en Canarias.*
+*Yaddiel Samper. Asesor inmobiliario especializado en inversión y activos NPL en Tenerife. Century 21 Lighthouse. 3x Premio al Mejor Asesor en Transacciones Institucionales en Canarias.*

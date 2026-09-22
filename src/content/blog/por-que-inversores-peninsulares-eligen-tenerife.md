@@ -58,4 +58,4 @@ Si tienes capital disponible y quieres analizar una operación en Tenerife, escr
 
 ---
 
-*Yaddiel Samper. Asesor inmobiliario especializado en inversión y activos NPL en Tenerife. Century 21 Lighthouse. 2x Premio al Mejor Asesor en Transacciones Institucionales en Canarias.*
+*Yaddiel Samper. Asesor inmobiliario especializado en inversión y activos NPL en Tenerife. Century 21 Lighthouse. 3x Premio al Mejor Asesor en Transacciones Institucionales en Canarias.*

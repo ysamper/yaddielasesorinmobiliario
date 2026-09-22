@@ -6,7 +6,7 @@ Redesign the homepage of yaddielasesorinmobiliario.com — a premium real estate
 
 ## Brand Identity
 
-- **Person:** Yaddiel Samper Leal — 2x Award Winner for Best Advisor in Institutional Transactions in the Canary Islands
+- **Person:** Yaddiel Samper Leal — 3x Award Winner for Best Advisor in Institutional Transactions in the Canary Islands
 - **Company:** Century 21 Lighthouse
 - **Location:** Av. El Paso 24, Los Majuelos, 38108 La Laguna, Santa Cruz de Tenerife
 - **Market:** Real estate investors (NPL/bank assets) + property sellers seeking premium, exclusive service
@@ -23,7 +23,7 @@ Redesign the homepage of yaddielasesorinmobiliario.com — a premium real estate
 ## Sections to Redesign (preserve content/copy)
 
 1. **Hero** — Split layout with photo + headline + dual CTAs (investor / seller)
-2. **Stats Bar** — 3 key metrics (2x award, +3 years, N.1 volume)
+2. **Stats Bar** — 3 key metrics (3x award, +3 years, N.1 volume)
 3. **Investors Section** — 4 value propositions in card grid
 4. **Sellers Process** — 3-step numbered process
 5. **Differentiators** — 4 reasons with Roman numeral icons

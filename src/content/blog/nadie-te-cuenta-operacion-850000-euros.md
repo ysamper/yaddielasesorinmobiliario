@@ -50,10 +50,10 @@ Traducir el proceso. Filtrar la información relevante. Anticipar los obstáculo
 
 Eso no lo enseña ningún curso. Se aprende cerrando operaciones reales.
 
-Tengo dos premios como asesor con mayor volumen de transacciones institucionales en Canarias. Este tipo de operaciones son exactamente la razón.
+Tengo tres premios como asesor con mayor volumen de transacciones institucionales en Canarias. Este tipo de operaciones son exactamente la razón.
 
 Si tienes capital y quieres entrar en activos de este nivel en Canarias, escríbeme antes de hacer ningún movimiento.
 
 ---
 
-*Yaddiel Samper. Asesor inmobiliario especializado en inversión y activos NPL en Tenerife. Century 21 Lighthouse. 2x Premio al Mejor Asesor en Transacciones Institucionales en Canarias.*
+*Yaddiel Samper. Asesor inmobiliario especializado en inversión y activos NPL en Tenerife. Century 21 Lighthouse. 3x Premio al Mejor Asesor en Transacciones Institucionales en Canarias.*

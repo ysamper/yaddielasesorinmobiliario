@@ -106,7 +106,7 @@ La inversión en due diligence es proporcional al riesgo del activo. Ahorrar en 
 
 Llevo tres años trabajando operaciones con fondos de inversión en Canarias. He mediado transacciones que superan los 850.000 euros entre inversores privados y fondos internacionales.
 
-Tengo dos premios como asesor con mayor volumen de transacciones institucionales en Canarias, otorgados por Century 21 España. No como dato de curriculum. Como resultado de operar en este mercado de forma consistente.
+Tengo tres premios como asesor con mayor volumen de transacciones institucionales en Canarias, otorgados por Century 21 España. No como dato de curriculum. Como resultado de operar en este mercado de forma consistente.
 
 Lo que me diferencia de un asesor generalista en este tipo de operaciones es el acceso directo a fondos, el conocimiento del proceso desde dentro y la capacidad de construir una oferta que el fondo tome en serio desde el primer contacto.
 
@@ -116,4 +116,4 @@ Escríbeme y lo analizamos sin rodeos.
 
 ---
 
-*Yaddiel Samper. Asesor inmobiliario especializado en inversión y activos NPL en Tenerife. Century 21 Lighthouse. 2x Premio al Mejor Asesor en Transacciones Institucionales en Canarias.*
+*Yaddiel Samper. Asesor inmobiliario especializado en inversión y activos NPL en Tenerife. Century 21 Lighthouse. 3x Premio al Mejor Asesor en Transacciones Institucionales en Canarias.*

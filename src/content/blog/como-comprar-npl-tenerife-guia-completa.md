@@ -107,7 +107,7 @@ En Canarias, el mercado receptor del activo una vez recuperado es sólido. Esa e
 
 ## Cómo valoro yo un NPL antes de recomendar una operación
 
-Después de tres años trabajando operaciones con fondos en Canarias y dos premios como asesor con mayor volumen de transacciones institucionales en la región, el proceso de análisis que aplico siempre incluye:
+Después de tres años trabajando operaciones con fondos en Canarias y tres premios como asesor con mayor volumen de transacciones institucionales en la región, el proceso de análisis que aplico siempre incluye:
 
 1. Verificación registral completa antes de cualquier conversación con el fondo.
 2. Valoración independiente del activo subyacente en su estado actual.
@@ -126,4 +126,4 @@ Si quieres analizar una operación concreta o entender si tu perfil inversor enc
 
 ---
 
-*Yaddiel Samper. Asesor inmobiliario especializado en inversión y activos NPL en Tenerife. Century 21 Lighthouse. 2x Premio al Mejor Asesor en Transacciones Institucionales en Canarias.*
+*Yaddiel Samper. Asesor inmobiliario especializado en inversión y activos NPL en Tenerife. Century 21 Lighthouse. 3x Premio al Mejor Asesor en Transacciones Institucionales en Canarias.*
