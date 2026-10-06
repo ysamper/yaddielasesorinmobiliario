@@ -76,7 +76,7 @@ El comprador se subroga en tus derechos y obligaciones como arrendador durante l
 
 El inquilino pierde el resto. Y quien le indemniza no es el comprador: es el enajenante. Una mensualidad de la renta en vigor por cada año que, excediendo del plazo legal, quedara por cumplir.
 
-Un contrato firmado a diez años, vendido en el año dos, puede dejarte una indemnización de tres mensualidades que no estaba en ninguna hoja de cálculo.
+Haz el cálculo con un caso concreto. Contrato firmado a diez años, venta en el año dos. El comprador soporta el arrendamiento hasta cumplir cinco. Los años que exceden ese plazo y quedaban por cumplir son cinco, del sexto al décimo. Cinco mensualidades de indemnización que no estaban en ninguna hoja de cálculo, y las pagas tú.
 
 ## En Canarias puede haber un segundo tanteo encima
 
