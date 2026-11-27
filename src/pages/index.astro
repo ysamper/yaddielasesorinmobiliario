@@ -28,6 +28,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
             <a href="#inversores" class="btn-primary">Soy inversor</a>
             <a href="#valoracion" class="btn-ghost">Quiero vender <span class="btn-arrow">&rarr;</span></a>
           </div>
+          <p class="hero-direct">¿Prefieres hablar ya? <a href="https://wa.me/34679891027" target="_blank" rel="noopener">WhatsApp</a> o <a href="tel:+34679891027">llámame</a>.</p>
         </div>
         <div class="hero-photo-col">
           <div class="hero-photo-wrap">
@@ -36,10 +37,6 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
               <img src="/yaddiel-samper.jpg" alt="Yaddiel Samper - Asesor Inmobiliario especializado en NPL y activos bancarios en Tenerife" class="hero-img" width="380" height="480" loading="eager" fetchpriority="high" />
             </picture>
             <div class="hero-photo-frame"></div>
-          </div>
-          <div class="hero-badge">
-            <span class="hero-badge-num">3x</span>
-            <span class="hero-badge-text">Premio Mejor Asesor<br>Transacciones Institucionales</span>
           </div>
         </div>
       </div>
@@ -161,7 +158,6 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 
   <!-- ===== SELLERS — Vertical timeline with progressive fill ===== -->
   <section id="como-funciona" class="sect-sellers">
-    <div class="sect-sellers-bg-num" aria-hidden="true">03</div>
     <div class="section-inner">
       <div class="section-tag reveal">Para vendedores</div>
       <h2 class="section-title reveal">Vende con estrategia.<br><em>No con prisa.</em></h2>
@@ -286,6 +282,17 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         </div>
         <div class="newsletter-right">
           <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="f412d34f-38e2-4cee-bb3e-bebeaf31b2d0"></script>
+          <script is:inline>
+            // El iframe lo inyecta Beehiiv sin nombre accesible: se le pone al aparecer.
+            (function () {
+              var box = document.currentScript && document.currentScript.parentElement;
+              if (!box) return;
+              new MutationObserver(function (_, obs) {
+                var frame = box.querySelector('iframe');
+                if (frame) { frame.title = 'Formulario de suscripción a la newsletter'; obs.disconnect(); }
+              }).observe(box, { childList: true, subtree: true });
+            })();
+          </script>
         </div>
       </div>
     </div>
@@ -309,14 +316,14 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
             <div class="map-detail-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></div>
             <div class="map-detail-text">
               <strong>Teléfono</strong>
-              <span>+34 679 89 10 27</span>
+              <a href="tel:+34679891027">+34 679 89 10 27</a>
             </div>
           </div>
           <div class="map-detail">
             <div class="map-detail-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
             <div class="map-detail-text">
               <strong>Email</strong>
-              <span>yaddiel.samper@century21.es</span>
+              <a href="mailto:yaddiel.samper@century21.es">yaddiel.samper@century21.es</a>
             </div>
           </div>
           <div class="map-detail">
@@ -330,6 +337,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         <div class="map-embed reveal">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.363454584872!2d-16.303849124304964!3d28.45929647575984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc41cd02f10f23a1%3A0xd32d828d32548cca!2sAv.%20el%20Paso%2C%2024%2C%2038108%20La%20Laguna%2C%20Santa%20Cruz%20de%20Tenerife!5e1!3m2!1ses!2ses!4v1778943161429!5m2!1ses!2ses"
+            title="Mapa de la oficina en Av. El Paso 24, La Laguna"
             width="600"
             height="340"
             allowfullscreen=""
@@ -400,42 +408,36 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
       <div class="cta-box reveal">
         <h2>Solicita tu<br><em>valoración gratuita</em></h2>
         <p>Recibes un informe personalizado con el precio real de mercado de tu propiedad en menos de 24 horas. Sin compromiso. Sin presión.</p>
-        <div class="rgpd-wrap">
-          <input type="checkbox" id="rgpd-consent" />
-          <label for="rgpd-consent">Acepto recibir comunicaciones comerciales de Yaddiel Samper relacionadas con mi propiedad y el proceso de venta. Puedo revocar este consentimiento en cualquier momento. <a href="/privacidad">Política de privacidad</a>.</label>
-        </div>
-        <a href="https://valuation.lystos.com?clientId=2f57af09-10e9-47ce-a505-281fa60511e3" class="btn-primary btn-primary-disabled" id="lystos-btn" target="_blank" rel="noopener" aria-disabled="true">Quiero mi valoración gratuita</a>
-        <p class="cta-hint" id="rgpd-hint">Marca la casilla para continuar</p>
-        <p class="cta-disclaimer">Datos protegidos bajo el RGPD. Nunca compartidos con terceros.</p>
+        <form class="cta-form" id="valoracion-form" action="https://valuation.lystos.com" method="get" target="_blank" rel="noopener">
+          <input type="hidden" name="clientId" value="2f57af09-10e9-47ce-a505-281fa60511e3" />
+          <div class="rgpd-wrap">
+            <input type="checkbox" id="privacy-consent" required aria-describedby="privacy-error" />
+            <label for="privacy-consent">He leído y acepto la <a href="/privacidad">política de privacidad</a>. <span class="rgpd-required">(obligatoria)</span></label>
+          </div>
+          <div class="rgpd-wrap">
+            <input type="checkbox" id="marketing-consent" />
+            <label for="marketing-consent">Quiero recibir comunicaciones comerciales de Yaddiel Samper sobre mi propiedad y el proceso de venta. Opcional: puedo revocarlo cuando quiera.</label>
+          </div>
+          <p class="cta-hint" id="privacy-error" role="alert" hidden>Para continuar, acepta la política de privacidad.</p>
+          <button type="submit" class="btn-primary">Quiero mi valoración gratuita</button>
+        </form>
+        <p class="cta-disclaimer">La valoración se hace en Lystos, la plataforma que uso como encargado del tratamiento. Tus datos se tratan según el RGPD; los detalles están en la <a href="/privacidad">política de privacidad</a>.</p>
       </div>
     </div>
   </section>
 
   <script>
-    const cb = document.getElementById('rgpd-consent');
-    const btn = document.getElementById('lystos-btn');
-    const hint = document.getElementById('rgpd-hint');
-    cb?.addEventListener('change', () => {
-      const checked = (cb as HTMLInputElement).checked;
-      if (checked) {
-        btn?.classList.remove('btn-primary-disabled');
-        btn?.setAttribute('aria-disabled', 'false');
-        hint?.classList.add('cta-hint--hidden');
-      } else {
-        btn?.classList.add('btn-primary-disabled');
-        btn?.setAttribute('aria-disabled', 'true');
-        hint?.classList.remove('cta-hint--hidden');
-      }
+    // La casilla obligatoria la valida el navegador (required). Aquí solo se
+    // muestra el aviso visible en español y se lleva el foco a la casilla.
+    const privacy = document.getElementById('privacy-consent') as HTMLInputElement | null;
+    const error = document.getElementById('privacy-error');
+    privacy?.addEventListener('invalid', (e) => {
+      e.preventDefault();
+      if (error) error.hidden = false;
+      privacy.focus();
     });
-    // Bloquea la navegación por teclado (Tab + Enter/Espacio) cuando el
-    // consentimiento RGPD no está marcado. pointer-events:none solo bloquea
-    // el ratón, no la activación por teclado en un <a href>.
-    btn?.addEventListener('click', (e) => {
-      if (btn.getAttribute('aria-disabled') === 'true') {
-        e.preventDefault();
-        cb?.focus();
-        hint?.classList.remove('cta-hint--hidden');
-      }
+    privacy?.addEventListener('change', () => {
+      if (privacy.checked && error) error.hidden = true;
     });
   </script>
 </BaseLayout>

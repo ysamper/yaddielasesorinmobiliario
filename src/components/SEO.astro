@@ -7,6 +7,7 @@ interface Props {
   canonical?: string;
   publishedAt?: Date;
   updatedAt?: Date;
+  noindex?: boolean;
 }
 
 const {
@@ -16,7 +17,8 @@ const {
   type = 'website',
   canonical,
   publishedAt,
-  updatedAt
+  updatedAt,
+  noindex = false
 } = Astro.props;
 
 const siteUrl = 'https://yaddielasesorinmobiliario.com';
@@ -25,7 +27,7 @@ const ogImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
 ---
 <title>{title}</title>
 <meta name="description" content={description} />
-<link rel="canonical" href={canonicalURL} />
+{noindex ? <meta name="robots" content="noindex, follow" /> : <link rel="canonical" href={canonicalURL} />}
 
 <meta property="og:type" content={type} />
 <meta property="og:url" content={canonicalURL} />

@@ -13,6 +13,7 @@ interface Props {
   canonical?: string;
   publishedAt?: Date;
   updatedAt?: Date;
+  noindex?: boolean;
 }
 
 const props = Astro.props;
@@ -26,9 +27,10 @@ const props = Astro.props;
     <meta name="google-site-verification" content="sVGcjKR209POdwsCFqr3EEOe49nZFLyMM20LiFfDw2o" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="alternate" type="application/rss+xml" title="Blog Yaddiel Samper" href="/rss.xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500&family=Outfit:wght@300;400;500;600&display=swap" />
+    <script is:inline>document.documentElement.classList.add('js');</script>
+    <link rel="preload" href="/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/fraunces-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
     <SEO {...props} />
 
     <!-- Google Consent Mode v2 - default denied (RGPD/LSSI-CE) -->
@@ -51,7 +53,26 @@ const props = Astro.props;
         cookie_flags: 'SameSite=None;Secure'
       });
     </script>
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-ZC00RYF9RQ"></script>
+    <script is:inline>
+      // gtag.js (185 KB) se carga tras la primera interacción o a los 7 s de la
+      // carga, para no bloquear el hilo principal en móvil. Los eventos ya
+      // encolados en dataLayer se envían al cargar.
+      (function () {
+        var loaded = false;
+        var events = ['pointerdown', 'keydown', 'scroll', 'touchstart'];
+        function load() {
+          if (loaded) return;
+          loaded = true;
+          events.forEach(function (e) { window.removeEventListener(e, load); });
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZC00RYF9RQ';
+          document.head.appendChild(s);
+        }
+        events.forEach(function (e) { window.addEventListener(e, load, { once: true, passive: true }); });
+        window.addEventListener('load', function () { setTimeout(load, 7000); });
+      })();
+    </script>
     <script type="application/ld+json" is:inline>
     {
       "@context": "https://schema.org",
