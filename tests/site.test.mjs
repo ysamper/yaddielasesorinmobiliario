@@ -78,3 +78,25 @@ test('#14 sin "3x" duplicado, sin "03" suelto y menú con tilde', () => {
   assert.match(index, />Valoración gratuita</);
   assert.doesNotMatch(index, /Valoracion gratuita/);
 });
+
+test('#12 el aviso legal muestra el NIF del titular', () => {
+  assert.match(read('aviso-legal/index.html'), /NIF:?<\/strong>\s*61439429N/);
+});
+
+test('#10 cada artículo tiene su propia imagen OG de 1200×630', () => {
+  const slugs = [...readFileSync(new URL('../dist/rss.xml', import.meta.url), 'utf8')
+    .matchAll(/<link>https:\/\/yaddielasesorinmobiliario\.com\/blog\/([^<]+?)\/?<\/link>/g)].map((m) => m[1]);
+  assert.ok(slugs.length > 0);
+  const images = new Set();
+  for (const slug of slugs) {
+    const html = read(`blog/${slug}/index.html`);
+    const og = html.match(/<meta property="og:image" content="([^"]+)"/)[1];
+    assert.equal(og, `https://yaddielasesorinmobiliario.com/og/${slug}.png`);
+    const png = readFileSync(new URL(`../dist/og/${slug}.png`, import.meta.url));
+    assert.equal(png.subarray(1, 4).toString(), 'PNG');
+    assert.equal(png.readUInt32BE(16), 1200);
+    assert.equal(png.readUInt32BE(20), 630);
+    images.add(png.length);
+  }
+  assert.ok(images.size > 1, 'las imágenes deben ser distintas entre artículos');
+});
